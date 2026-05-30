@@ -85,9 +85,9 @@ function Footer() {
           <div className="bottom-content">
             <p>&copy; {currentYear} Developed By Chanchal Kumar Yadav & Prateek Pandey </p>
             <div className="bottom-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Sitemap</a>
+              <p>Privacy Policy</p>
+              <p>Terms of Service</p>
+              <p>Sitemap</p>
             </div>
           </div>
         </div>
