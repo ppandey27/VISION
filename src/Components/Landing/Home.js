@@ -3,6 +3,7 @@ import "./Home.css";
 
 function Home() {
   const [scroll, setScroll] = useState(0);
+ 
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
 
   useEffect(() => {
@@ -129,8 +130,8 @@ return (
         </p>
 
         <div className="hero-cta-wrapper">
-          <a href="tel:+919999999999" className="action-call-btn">📞 CALL US NOW</a>
-          <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="secondary-btn">
+          <a href="tel:+918092294253" className="action-call-btn">📞 CALL US NOW</a>
+          <a href="https://wa.me/918092294253" target="_blank" rel="noreferrer" className="secondary-btn">
             💬 WHATSAPP
           </a>
         </div>
@@ -181,7 +182,7 @@ return (
               <div className="service-content-home">
                 <h3>{service.title}</h3>
                 <p>{service.desc}</p>
-                <a href="#" className="service-link-home">Learn More →</a>
+                
               </div>
             </div>
           ))}
@@ -302,7 +303,7 @@ return (
               <li>✓ Timely project completion</li>
               <li>✓ Affordable premium designs</li>
             </ul>
-            <a href="tel:+919999999999" className="action-call-btn outline">Start Your Dream Project</a>
+            <a href="tel:+918092294253" className="action-call-btn outline">Start Your Dream Project</a>
           </div>
           <div className="whyus-right">
             <div className="whyus-image-placeholder">
