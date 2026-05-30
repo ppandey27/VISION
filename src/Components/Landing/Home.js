@@ -3,7 +3,6 @@ import "./Home.css";
 
 function Home() {
   const [scroll, setScroll] = useState(0);
-  const [activeSlide, setActiveSlide] = useState(0);
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
 
   useEffect(() => {
