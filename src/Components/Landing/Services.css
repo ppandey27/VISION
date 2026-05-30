@@ -1,0 +1,333 @@
+/* ==========================================================================
+   SERVICES CONTAINER BASE WRAPPER (LIGHT CORPORATE THEME)
+   ========================================================================== */
+
+.services-section {
+  width: 100%;
+  padding: 100px 24px 80px 24px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HEADER TITLE BLOCK (HIGH CONTRAST FOR LIGHT THEME)
+   ========================================================================== */
+
+.services-header-box {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-mini-title {
+  color: #b48924;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.services-main-title {
+  color: #1e293b;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+}
+
+.title-gold-line {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #cca43b, transparent);
+  margin: 18px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   GRID STORAGE WRAPPER
+   ========================================================================== */
+
+.services-grid-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px 30px;
+}
+
+/* ==========================================================================
+   COMPACT & ATTRACTIVE CARD DESIGN
+   ========================================================================== */
+
+.service-premium-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 20px;
+  position: relative;
+  
+  /* Smaller, more compact card */
+  flex: 1 1 calc(33.333% - 30px);
+  min-width: 280px;
+  max-width: 350px;
+  
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+  box-sizing: border-box;
+  overflow: hidden;
+  
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  filter: blur(2px);
+  transition: 
+    opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    filter 0.6s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.service-premium-card.reveal-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.service-premium-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(204, 164, 59, 0.3);
+  box-shadow: 0 20px 35px rgba(15, 23, 42, 0.12), 0 0 0 2px rgba(204, 164, 59, 0.1);
+}
+
+/* ==========================================================================
+   COMPACT IMAGE FRAME - SMALLER HEIGHT
+   ========================================================================== */
+
+.service-card-image-box {
+  width: 100%;
+  height: 170px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.service-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.service-premium-card:hover .service-card-img {
+  transform: scale(1.1);
+}
+
+.image-gold-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 60%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+}
+
+/* ==========================================================================
+   COMPACT TEXT CONTENT - REDUCED PADDING
+   ========================================================================== */
+
+.service-card-body {
+  padding: 18px 20px 22px 20px;
+}
+
+.service-card-title {
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  margin-top: 0;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.service-premium-card:hover .service-card-title {
+  color: #b48924;
+}
+
+.service-item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.service-item-list li {
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.service-premium-card:hover .service-item-list li {
+  color: #1e293b;
+}
+
+.service-item-list li:hover {
+  transform: translateX(4px);
+  color: #b48924 !important;
+}
+
+.bullet-glow {
+  font-size: 0.7rem;
+  color: #cca43b;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.service-item-list li:hover .bullet-glow {
+  transform: scale(1.2);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .services-grid-wrapper {
+    gap: 30px 25px;
+  }
+  
+  .service-premium-card {
+    flex: 1 1 calc(50% - 25px);
+    max-width: calc(50% - 25px);
+    min-width: 260px;
+  }
+  
+  .services-main-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .service-card-image-box {
+    height: 160px;
+  }
+  
+  .service-card-body {
+    padding: 16px 18px 20px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 80px 16px 60px 16px;
+  }
+  
+  .services-main-title {
+    font-size: 1.6rem;
+  }
+  
+  .services-mini-title {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+  }
+  
+  .services-header-box {
+    margin-bottom: 40px;
+  }
+  
+  .title-gold-line {
+    width: 70px;
+    height: 2px;
+    margin: 15px auto 0 auto;
+  }
+
+  .service-premium-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 100%;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  
+  .service-card-image-box {
+    height: 180px;
+  }
+  
+  .service-card-body {
+    padding: 16px 16px 18px 16px;
+  }
+  
+  .service-card-title {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    white-space: normal;
+  }
+  
+  .service-item-list {
+    gap: 7px;
+  }
+  
+  .service-item-list li {
+    font-size: 0.8rem;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 60px 12px 40px 12px;
+  }
+  
+  .services-main-title {
+    font-size: 1.3rem;
+  }
+  
+  .services-mini-title {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+  }
+  
+  .service-card-image-box {
+    height: 150px;
+  }
+  
+  .service-card-body {
+    padding: 14px 14px 16px 14px;
+  }
+  
+  .service-card-title {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-item-list li {
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+  
+  .bullet-glow {
+    font-size: 0.65rem;
+  }
+}

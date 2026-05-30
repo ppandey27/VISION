@@ -1,0 +1,411 @@
+/* ==========================================================================
+   BASE WRAPPER & BACKGROUND ENGINE (LIGHT CORPORATE INTEGRATION)
+   ========================================================================== */
+
+.contact-premium-section {
+  width: 100%;
+  padding: 110px 24px;
+  /* Services section se completely match karta hua light background */
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Background soft decorative luxury glow effects for light theme */
+.bg-glow-blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.12; /* Light mode me visible blur blend setup */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.blob-gold {
+  top: 5%;
+  left: -5%;
+  background: #cca43b;
+}
+
+.blob-slate {
+  bottom: 5%;
+  right: -5%;
+  background: #38bdf8;
+}
+
+/* ==========================================================================
+   GRID CORE DISTRIBUTION LAYOUT
+   ========================================================================== */
+
+.contact-main-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 45px;
+  z-index: 2;
+  
+  /* Smooth initial state scroll properties */
+  opacity: 0;
+  transform: translateY(50px) scale(0.97);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Intersection observer entry point trigger active style */
+.contact-revealed .contact-main-container {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ==========================================================================
+   LEFT CARD: ENGINEER PROFILE & INFO CARD (LIGHT VARIANT)
+   ========================================================================== */
+
+.profile-identity-card {
+  flex: 1;
+  /* Pure high contrast elegant clean white panel card setup */
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 16px;
+  padding: 45px 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.profile-identity-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(204, 164, 59, 0.4);
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.08), 0 0 20px rgba(204, 164, 59, 0.1);
+}
+
+.premium-badge {
+  align-self: flex-start;
+  background: rgba(180, 137, 36, 0.08);
+  border: 1px solid #b48924;
+  color: #b48924;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  margin-bottom: 25px;
+}
+
+.engineer-name {
+  color: #0f172a; /* Slate black clear readability */
+  font-size: 2.6rem;
+  font-weight: 900;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.5px;
+}
+
+.engineer-subtitle {
+  color: #475569; /* Solid graphite gray subtitles */
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+
+/* Tagline layout highlight quotes box */
+.tagline-marquee-box {
+  background: #f8fafc;
+  border-left: 4px solid #cca43b;
+  padding: 18px 24px;
+  border-radius: 0 12px 12px 0;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.tag-quote {
+  position: absolute;
+  font-size: 3rem;
+  color: rgba(204, 164, 59, 0.15);
+  top: -5px;
+  left: 12px;
+  font-family: serif;
+}
+
+.active-tagline {
+  color: #1e293b;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  font-style: italic;
+}
+
+.tag-sub-features {
+  font-size: 0.92rem;
+  color: #475569;
+}
+
+.tag-sub-features span {
+  color: #b48924;
+  font-weight: 700;
+}
+
+.divider-line-gold {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(204, 164, 59, 0.3) 0%, transparent 100%);
+  margin-bottom: 35px;
+}
+
+/* Contact information list columns rows */
+.contact-quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.info-row-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+}
+
+.icon-sphere-btn {
+  width: 48px;
+  height: 48px;
+  background: #f1f5f9;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
+  transition: all 0.3s ease;
+}
+
+.info-row-item:hover .icon-sphere-btn {
+  background: #cca43b;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(204, 164, 59, 0.3);
+}
+
+.info-text-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-text-details span {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.info-text-details strong {
+  font-size: 1.15rem;
+  color: #1e293b;
+  font-weight: 600;
+  margin-top: 2px;
+  transition: color 0.2s ease;
+}
+
+.info-row-item:hover .info-text-details strong {
+  color: #b48924;
+}
+
+/* Direct Call Action Button System */
+.action-glow-call-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 16px;
+  background: #cca43b;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(204, 164, 59, 0.25);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.action-glow-call-btn:hover {
+  background: #1e293b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(30, 41, 59, 0.2);
+}
+
+.arrow-pulse {
+  animation: microBounce 1s infinite alternate;
+}
+
+/* ==========================================================================
+   RIGHT CARD: INTERACTIVE ENQUIRY FORM CONTAINER
+   ========================================================================== */
+
+.interactive-form-card {
+  flex: 1.1;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  border-radius: 16px;
+  padding: 45px 40px;
+  transition: all 0.4s ease;
+}
+
+.interactive-form-card:hover {
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.07);
+}
+
+.form-card-title {
+  color: #0f172a;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+}
+
+.form-card-desc {
+  color: #475569;
+  font-size: 0.95rem;
+  margin: 0 0 35px 0;
+  line-height: 1.5;
+}
+
+.actual-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.input-field-group {
+  width: 100%;
+}
+
+/* Form input elements tuned for crisp daytime rendering */
+.premium-form-input,
+.premium-form-textarea {
+  width: 100%;
+  padding: 15px 16px;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 8px;
+  color: #0f172a;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.premium-form-input:focus,
+.premium-form-textarea:focus {
+  border-color: #cca43b;
+  background: #ffffff;
+  box-shadow: 0 0 12px rgba(204, 164, 59, 0.15);
+}
+
+.premium-form-input::placeholder,
+.premium-form-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.premium-form-textarea {
+  resize: none;
+}
+
+/* Submit primary action hotspot button */
+.form-submit-premium-btn {
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  border: 2px solid #b48924;
+  color: #b48924;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.form-submit-premium-btn:hover {
+  background: #b48924;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(180, 137, 36, 0.25);
+}
+
+/* ==========================================================================
+   ANIMATION KEYFRAMES
+   ========================================================================== */
+
+@keyframes microBounce {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(4px); }
+}
+
+/* ==========================================================================
+   100% MAXIMUM CELLULAR MOBILE ADAPTABILITY
+   ========================================================================== */
+
+@media (max-width: 968px) {
+  .contact-main-container {
+    flex-direction: column; /* Row layout stacks vertically automatically on tablet screens */
+    gap: 35px;
+  }
+  
+  .profile-identity-card,
+  .interactive-form-card {
+    padding: 40px 30px;
+    max-width: 100%;
+  }
+  
+  .engineer-name {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-premium-section {
+    padding: 90px 16px; /* Space compression for mid-range smart screens */
+  }
+  
+  .profile-identity-card,
+  .interactive-form-card {
+    padding: 32px 22px;
+  }
+  
+  /* Auto-turning off motion-blur delays on smartphones for lag-free interactions */
+  .contact-main-container {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-premium-section {
+    padding: 70px 12px;
+  }
+  
+  .engineer-name {
+    font-size: 1.9rem;
+  }
+  
+  .form-card-title {
+    font-size: 1.35rem;
+  }
+  
+  .action-glow-call-btn {
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+}
