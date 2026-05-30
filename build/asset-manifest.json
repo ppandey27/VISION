@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.59f34ef7.css",
+    "main.js": "/static/js/main.b04eda80.js",
+    "static/media/VisionLOGO1.png": "/static/media/VisionLOGO1.12e810da71c9d469f86b.png",
+    "index.html": "/index.html",
+    "main.59f34ef7.css.map": "/static/css/main.59f34ef7.css.map",
+    "main.b04eda80.js.map": "/static/js/main.b04eda80.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59f34ef7.css",
+    "static/js/main.b04eda80.js"
+  ]
+}
